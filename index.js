@@ -1,0 +1,40 @@
+import inquirer from 'inquirer';
+import { exec } from "child_process";
+
+
+function createNewProj(name){
+  exec(`git clone https://github.com/micziz/seasann-template ${name}`, (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+  });
+  console.log(`Done! Project initialized at ${name}`);
+  console.log("Next steps:")
+  console.log(`\n     cd ${name}`)
+  console.log("     npm i")
+  console.log("To run the builder")
+  console.log("\n     node .")
+  console.log("     node express.js\n")
+
+}
+
+
+
+var args = process.argv;
+if (args[2] == "new"){
+  async function askNameOfProject() {
+    const answers = await inquirer.prompt({
+      name: 'project_name',
+      type: 'input',
+      message: 'What is the name of the website?',
+      default() {
+        return 'Player';
+      },
+    });
+  
+    return createNewProj(answers.project_name)
+  }
+
+  await askNameOfProject()
+}
