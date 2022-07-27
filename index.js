@@ -51,12 +51,14 @@ app.get('/${nfile}', (req, res) => {
           return;
         }
         const nhtml = marked.parse(data);
-        fs.writeFile(`./app/${nfile}.html`, nhtml, err => {
-          if (err) {
-            console.error(err)
-            return
-          }
-        })
+        if (!fs.existsSync('foo.txt')) {
+          fs.writeFile(`./app/${nfile}.html`, nhtml, err => {
+            if (err) {
+              console.error(err)
+              return
+            }
+          })
+        }
       });
 
 
