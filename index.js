@@ -49,7 +49,7 @@ if (args[2] == "new"){
       type: 'input',
       message: 'What is the name of the website?',
       default() {
-        return 'Player';
+        return 'seasann-app';
       },
     });
   
@@ -64,7 +64,7 @@ if (args[2] == "new"){
       type: 'input',
       message: 'What is the name of the website?',
       default() {
-        return 'Player';
+        return 'seasann-app';
       },
     });
   
