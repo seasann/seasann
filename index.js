@@ -20,6 +20,12 @@ function createNewProj(name){
 }
 
 function initProj(name){
+  exec(`git init`, (error) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+  });
   exec(`git pull https://github.com/micziz/seasann-template --allow-unrelated-histories`, (error) => {
     if (error) {
         console.log(`error: ${error.message}`);
