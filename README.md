@@ -1,2 +1,0 @@
-# seasann-template
-seasann-template
