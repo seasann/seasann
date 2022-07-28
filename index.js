@@ -3,7 +3,7 @@ import { exec } from "child_process";
 
 
 function createNewProj(name){
-  exec(`git clone https://github.com/micziz/seasann-template ${name}`, (error) => {
+  exec(`git clone https://github.com/micziz/seasann-template.git ${name}`, (error) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -26,7 +26,7 @@ function initProj(name){
         return;
     }
   });
-  exec(`git pull https://github.com/micziz/seasann-template --allow-unrelated-histories`, (error) => {
+  exec(`git pull https://github.com/micziz/seasann-template.git --allow-unrelated-histories`, (error) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
