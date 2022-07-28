@@ -9,7 +9,7 @@ function createNewProj(name){
         return;
     }
   });
-  console.log(`Done! Project initialized at ${name}`);
+  console.log(`Done! Project created at ${name}`);
   console.log("Next steps:")
   console.log(`\n     cd ${name}`)
   console.log("     npm i")
@@ -28,7 +28,6 @@ function initProj(name){
   });
   console.log(`Done! Project initialized at ${name}`);
   console.log("Next steps:")
-  console.log(`\n     cd ${name}`)
   console.log("     npm i")
   console.log("To run the builder")
   console.log("\n     node .")
