@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
-  "bin": "./index.js",
+  "bin": "./src/index.js",
   "dependencies": {
     "inquirer": "^9.0.2"
   }
