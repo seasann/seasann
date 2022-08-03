@@ -1,6 +1,7 @@
 import inquirer from 'inquirer';
 import { exec } from "child_process";
 import { writeFile } from "fs";
+import { chdir } from "process";
 
 function reMakePkgJson(name){
   let content = `
@@ -32,12 +33,13 @@ function reMakePkgJson(name){
 }
 
 function createNewProj(name){
-  exec(`git clone --branch develop https://github.com/micziz/seasann-template.git ${name}`, (error) => {
+  exec(`git clone https://github.com/micziz/seasann-template.git ${name}`, (error) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
     }
   });
+  chdir(name)
   reMakePkgJson(name)
   console.log(`Done! Project created at ${name}`);
   console.log("Next steps:")
