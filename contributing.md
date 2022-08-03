@@ -64,7 +64,7 @@ We offer a template, but feel free to deleate options that are not relevant
 
 #### Create a title
 
-Pull requests require grat titles. Here are some prefix for titles:
+Pull requests require great titles. Here are some prefix for titles:
 
 - **feat**: New feature
 
@@ -72,15 +72,14 @@ Pull requests require grat titles. Here are some prefix for titles:
 
 - **fix**: Small bugfix
 
-- **style** Formatting changes witch does not impact code
+- **style**: Formatting changes witch does not impact code
 
-- **refactor** Refactored code
+- **refactor**: Refactored code
 
-- **chore** Updating configs, workflows etc. Does not impact code.
+- **chore**: Updating configs, workflows etc. Does not impact code. 
 
+Make sure also that: 
 
-So the title is 
-
-You are merging your branch into the develop branch
-You link any issues that are resolved or fixed by your changes. (this is done by typing "Fixes #<issue number>") in your pull request
-Where possible, you have used git pull --rebase, to avoid creating unnecessary merge commits
+- You are merging your branch into the develop branch
+- You link any issues that are resolved or fixed by your changes. (this is done by typing "Fixes #<issue number>") in your pull request
+- Where possible, you have used git pull --rebase, to avoid creating unnecessary merge commits
