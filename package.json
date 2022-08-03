@@ -1,6 +1,6 @@
 {
   "name": "seasann",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Minimal Static Site Generator",
   "main": "src/index.js",
   "type": "module",
