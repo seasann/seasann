@@ -1,5 +1,7 @@
 import inquirer from 'inquirer';
 import { exec } from "child_process";
+const version = "Seasann v0.4.1";
+
 
 function createNewProj(name){
   exec(`git clone https://github.com/micziz/seasann-template.git ${name}`, (error) => {
@@ -70,4 +72,6 @@ if (args[2] == "new"){
     return initProj(answers.project_name)
   }
   await askNameOfProject()
+}else if (args[2] == "--version"){
+  console.log(version)
 }
