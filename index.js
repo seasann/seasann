@@ -15,7 +15,7 @@ function createNewProj(name){
   console.log("     npm i")
   console.log("To run the builder")
   console.log("\n     node .")
-  console.log("     node express.js\n")
+  console.log("     node express.cjs\n")
 
 }
 
@@ -37,7 +37,7 @@ function initProj(name){
   console.log("     npm i")
   console.log("To run the builder")
   console.log("\n     node .")
-  console.log("     node express.js\n")
+  console.log("     node express.cjs\n")
 }
 
 
