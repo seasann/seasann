@@ -40,7 +40,7 @@ function initProj(name){
 }
 
 
-var args = process.argv;
+let args = process.argv;
 if (args[2] == "new"){
   async function askNameOfProject() {
     const answers = await inquirer.prompt({
