@@ -34,7 +34,7 @@ This will
 
 Note that if the markdown file is called index, than that will be asigend to the / route.
 
-## Runing the site
+## Runing the site ⚙️
 
 Run:
 
@@ -51,7 +51,7 @@ posts
 
 will correspond to `https://example.com/main`.
 
-## Faq
+## Faq ❓
 
 ### Why?
 
