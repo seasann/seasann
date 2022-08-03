@@ -1,7 +1,6 @@
 import inquirer from 'inquirer';
 import { exec } from "child_process";
 import { writeFile } from "fs";
-import { chdir } from "process";
 
 function reMakePkgJson(name){
   let content = `
@@ -39,7 +38,6 @@ function createNewProj(name){
         return;
     }
   });
-  chdir(name)
   reMakePkgJson(name)
   console.log(`Done! Project created at ${name}`);
   console.log("Next steps:")
