@@ -1,14 +1,44 @@
 import inquirer from 'inquirer';
 import { exec } from "child_process";
+import { writeFile } from "fs";
 
+function reMakePkgJson(name){
+  let content = `
+{
+  "name": "${name}",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node index.js"
+    "dev": "node index.js && node express.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "express": "^4.18.1",
+    "inquirer": "^9.0.2",
+    "marked": "^4.0.18"
+  }
+}  
+  `
+  writeFile('./package.json', content, err => {
+    if (err){
+      console.log(err);
+    }
+  })
+}
 
 function createNewProj(name){
-  exec(`git clone https://github.com/micziz/seasann-template.git ${name}`, (error) => {
+  exec(`git clone --branch develop https://github.com/micziz/seasann-template.git ${name}`, (error) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
     }
   });
+  reMakePkgJson(name)
   console.log(`Done! Project created at ${name}`);
   console.log("Next steps:")
   console.log(`\n     cd ${name}`)
