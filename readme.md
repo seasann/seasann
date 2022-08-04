@@ -11,7 +11,7 @@ The package manager of choice is [pnpm](https://pnpm.io). This should also work 
 pnpx seasann new
 ```
 
-If you are already in a directory, run:  
+If you are already in a directory, run:
 
 ```bash
 pnpx seasann init
@@ -30,11 +30,11 @@ pnpm run build
 This will
 
 1. Go through your pages directory and convert them to html.
-2. Assig each page a route in the express app that is in express.js
+2. Assign each page a route in the express app that is in express.js
 
 Note that if the markdown file is called index, than that will be asigend to the / route.
 
-## Runing the site ⚙️
+## Running the site ⚙️
 
 Run:
 
@@ -45,7 +45,7 @@ pnpm run dev
 This will build and start the express app at localhost 3000. Remeber that every markdown file is a route. For example:
 
 ```
-posts    
+posts
 └───main.md
 ```
 
@@ -57,7 +57,7 @@ will correspond to `https://example.com/main`.
 
 1. Bulkiness: SSG are getting bulkier, and require thousands of dependencies
 
-2. Transparency: You just write some markdown and it will be tranformed by some complicated cli into strange html.
+2. Transparency: You just write some markdown and it will be transformed by some complicated cli into strange html.
 
 3. CSS. If you use an SSG today, you are pretty much giving away your control to some theme made by another guy.
 
