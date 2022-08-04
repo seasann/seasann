@@ -75,6 +75,6 @@ if (args[2] == 'new') {
     return initProj(answers.project_name);
   }
   await askNameOfProject();
-} else if (args[2] == '--version') {
+} else if (args[2] == '--version' || args[2] == "-V") { 
   console.log(version);
 }
