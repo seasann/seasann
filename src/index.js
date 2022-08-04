@@ -1,5 +1,6 @@
 import { exec } from 'child_process';
 import inquirer from 'inquirer';
+import { cwd } from 'process';
 const version = 'Seasann v0.5.0';
 
 
@@ -27,7 +28,6 @@ function createNewProj(name) {
     console.log(`\n     cd ${name}`);
     console.log('     npm i');
     console.log('To start a server');
-    console.log('\n     node .');
     console.log('     npm run dev\n');
   }
 }
@@ -48,12 +48,13 @@ function initProj(name) {
       }
     }
   );
-  console.log(`Done! Project initialized at ${name}`);
-  console.log('Next steps:');
-  console.log('     npm i');
-  console.log('To run the builder');
-  console.log('\n     node .');
-  console.log('     npm run dev\n');
+  console.log(`Done! Project initialized at ${cwd}`);
+  if (args[3] != '--silent'){
+    console.log('Next steps:');
+    console.log('     npm i');
+    console.log('To start a server');
+    console.log('     npm run dev\n');
+  }
 }
 
 let args = process.argv;
