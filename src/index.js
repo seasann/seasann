@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 import inquirer from 'inquirer';
-const version = 'Seasann v0.4.1';
+const version = 'Seasann v0.4.3';
 
 function createNewProj(name) {
   exec(
