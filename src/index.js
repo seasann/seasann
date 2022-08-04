@@ -1,6 +1,15 @@
 import { exec } from 'child_process';
 import inquirer from 'inquirer';
-const version = 'Seasann v0.4.4';
+const version = 'Seasann v0.5.0';
+
+
+function help(){
+  console.log('Usage: node . command [options]')
+  console.log('   --help, -h: Print this messeage and exit')
+  console.log('   --version, -V: Print version and exit')
+  console.log('   new: Create a new project')
+  console.log('   init: Initialize new project in the current working directory')
+}
 
 function createNewProj(name) {
   exec(
@@ -13,12 +22,14 @@ function createNewProj(name) {
     }
   );
   console.log(`Done! Project created at ${name}`);
-  console.log('Next steps:');
-  console.log(`\n     cd ${name}`);
-  console.log('     npm i');
-  console.log('To start a server');
-  console.log('\n     node .');
-  console.log('     npm run dev\n');
+  if (args[3] != '--silent'){
+    console.log('Next steps:');
+    console.log(`\n     cd ${name}`);
+    console.log('     npm i');
+    console.log('To start a server');
+    console.log('\n     node .');
+    console.log('     npm run dev\n');
+  }
 }
 
 function initProj(name) {
@@ -77,4 +88,8 @@ if (args[2] == 'new') {
   await askNameOfProject();
 } else if (args[2] == '--version' || args[2] == "-V") { 
   console.log(version);
+} else if (args[2] == '--help' || args[2] == '-H'){
+  help()
+} else {
+  help()
 }
