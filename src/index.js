@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 import inquirer from 'inquirer';
-const version = 'Seasann v0.4.3';
+const version = 'Seasann v0.4.4';
 
 function createNewProj(name) {
   exec(
@@ -16,9 +16,9 @@ function createNewProj(name) {
   console.log('Next steps:');
   console.log(`\n     cd ${name}`);
   console.log('     npm i');
-  console.log('To run the builder');
+  console.log('To start a server');
   console.log('\n     node .');
-  console.log('     node express.cjs\n');
+  console.log('     npm run dev\n');
 }
 
 function initProj(name) {
@@ -42,7 +42,7 @@ function initProj(name) {
   console.log('     npm i');
   console.log('To run the builder');
   console.log('\n     node .');
-  console.log('     node express.cjs\n');
+  console.log('     npm run dev\n');
 }
 
 let args = process.argv;
