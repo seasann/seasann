@@ -3,6 +3,21 @@
     <p>Minimalist and un-opinionated static site generator</p>
 </div>
 
+## Introduction
+
+Seasann is a minimalist static site generator that is designed to be as un-opinionated and minimal as possible.
+
+Seasann is built with TypeScript.
+
+## Prerequisites
+
+You need to have the following packages installed:
+
+- [Node.js](https://nodejs.org)
+- [Git](https://git-scm.com)
+- [NPM](https://www.npmjs.com)
+- [NPX](https://docs.npmjs.com/cli/v7/commands/npx/)
+
 ## Create a new project 💾
 
 Generate a new project using [npx](https://www.npmjs.com/package/npx). Npx comes bundled with npm version 5.2+. It's also a package for older version.
@@ -11,7 +26,7 @@ Generate a new project using [npx](https://www.npmjs.com/package/npx). Npx comes
 npx seasann new
 ```
 
-yarn and pnpm are also options.
+Yarn and Pnpx are also supported.
 
 If you are already in a directory, run:
 
@@ -44,7 +59,7 @@ Run:
 npm run dev
 ```
 
-This will build and start the express app at localhost 3000. Remeber that every markdown file is a route. For example:
+This will build and start the express app at localhost 3000. Remember that every markdown file is a route. For example:
 
 ```
 posts
@@ -53,7 +68,7 @@ posts
 
 will correspond to `https://example.com/main`.
 
-## Faq ❓
+## Faq
 
 ### Why?
 
@@ -65,11 +80,11 @@ will correspond to `https://example.com/main`.
 
 Seasann is minimal, transparent and gives you full control over css.
 
-### Who created the project
+### Author
 
 The project was created and is currently maintained by micziz.
 
-### Can i contribute?
+### Can I contribute?
 
 Sure. Please read [contributing.md](contributing.md) before contributing!
 
@@ -83,6 +98,4 @@ On the backend it uses express.js for a minimal yet reliable backend. It also sy
 
 (Supported from 0.3.0) Create a file that is the same name from the markdown file you want to modify. It will be added.
 
-### What is the license?
-
-Apache-2.0
+The project is licensed under the [Apache 2.0 license](LICENSE).
