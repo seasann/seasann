@@ -8,12 +8,22 @@ export function initProj() {
             return;
         }
     });
-    exec(`git pull https://github.com/seasann/seasann-template.git --allow-unrelated-histories`, (error) => {
-        if (error) {
-            console.log(`error: ${error.message}`);
-            return;
-        }
-    });
+    if (args[3] == '--ts') {
+        exec(`git pull https://github.com/seasann/seasann-template-td.git --allow-unrelated-histories`, (error) => {
+            if (error) {
+                console.log(`error: ${error.message}`);
+                return;
+            }
+        });
+    }
+    else {
+        exec(`git pull https://github.com/seasann/seasann-template.git --allow-unrelated-histories`, (error) => {
+            if (error) {
+                console.log(`error: ${error.message}`);
+                return;
+            }
+        });
+    }
     console.log(`Done! Project initialized at ${cwd}`);
     if (args[3] != '--silent') {
         console.log('Next steps:');
