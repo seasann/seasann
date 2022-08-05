@@ -3,15 +3,27 @@ import { detect } from 'detect-package-manager';
 let args = process.argv;
 
 export function createNewProj(name: any) {
-  exec(
-    `git clone https://github.com/seasann/seasann-template.git ${name}`,
-    (error) => {
-      if (error) {
-        console.log(`error: ${error.message}`);
-        return;
+  if (args[3] == '--ts') {
+    exec(
+      `git clone https://github.com/seasann/seasann-template-ts.git ${name}`,
+      (error) => {
+        if (error) {
+          console.log(`error: ${error.message}`);
+          return;
+        }
       }
-    }
-  );
+    );
+  } else {
+    exec(
+      `git clone https://github.com/seasann/seasann-template.git ${name}`,
+      (error) => {
+        if (error) {
+          console.log(`error: ${error.message}`);
+          return;
+        }
+      }
+    );
+  }
   console.log(`Done! Project created at ${name}`);
   if (args[3] != '--silent') {
     console.log('Next steps:');
