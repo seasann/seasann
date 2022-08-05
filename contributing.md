@@ -67,13 +67,13 @@ Now we need to install dependencies. The preferred package manager is [npm](http
 npm install
 ```
 
-It will install all the required packages. If you have just installed pnp, some setup may be required.
+If you get errors with typescript, install it globally using:
 
-Typescript is required! Install it using `npm i -g typescript` or `npm i typescript --save-dev` in the root of the project.
+```bash
+npm i -g typescript
+```
 
-If you want to modify markdown code, install the markdown all in one extension.
-
-One final thing. While you can use text editor/IDE of your choice, but we recommend the usage of [VS Code](https://code.visualstudio.com).
+One final thing. While you can use text editor/IDE of your choice, we recommend the usage of [VS Code](https://code.visualstudio.com).
 
 Your developer environment is setup! Now we can start developing!
 
@@ -98,6 +98,10 @@ Pull requests require great titles. Here are some prefix for titles:
 - **refactor**: Refactored code
 
 - **chore**: Updating configs, workflows etc. Does not impact code.
+
+So the title should be:
+
+**type**: PR title
 
 Make sure also that:
 

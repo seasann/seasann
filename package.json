@@ -22,6 +22,7 @@
     "@types/inquirer": "^9.0.0",
     "@types/node": "^18.6.4",
     "husky": "^8.0.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
   }
 }
