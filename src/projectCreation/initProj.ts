@@ -10,7 +10,7 @@ export function initProj() {
     }
   });
   exec(
-    `git pull https://github.com/micziz/seasann-template.git --allow-unrelated-histories`,
+    `git pull https://github.com/seasann/seasann-template.git --allow-unrelated-histories`,
     (error) => {
       if (error) {
         console.log(`error: ${error.message}`);
