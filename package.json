@@ -8,7 +8,7 @@
     "prepare": "husky install",
     "prettier": "prettier --write .",
     "build-tsc": "tsc -b",
-    "build": "prettier --write . && tsc -b && git add . && git commit -m 'Build Commit'"
+    "build": "rm -rf build && prettier --write . && tsc -b"
   },
   "keywords": [],
   "author": "",
