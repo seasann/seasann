@@ -70,10 +70,8 @@ will correspond to `https://example.com/main`.
 
 ## Todo:
 
-- Testing (WIP)
-- Add global styling
-- Add themes
-
+- [x] Add themes
+- [ ] Add global styling
 
 ## Faq
 
@@ -103,6 +101,6 @@ On the backend it uses express.js for a minimal yet reliable backend. It also sy
 
 ### Css?
 
-(Supported from 0.3.0) Create a file that is the same name from the markdown file you want to modify. It will be added.
+(Supported from 0.3.0) Create a file that is the same name from the markdown file you want to modify. It will be added. Styles are scoped.
 
 The project is licensed under the [Apache 2.0 license](LICENSE).
