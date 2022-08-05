@@ -1,11 +1,11 @@
 import inquirer from 'inquirer';
-import { createNewProj } from './projectCreation/createNewProject';
-import { initProj } from './projectCreation/initProj';
-import { help } from './functions/help';
+import { initProj } from './projectCreation/initProj.js';
+import { createNewProj } from './projectCreation/createNewProject.js';
+import { help } from './functions/help.js';
 const version = 'Seasann v0.5.0';
 const args = process.argv;
 if (args[2] == 'new') {
-    async function askNameOfProject() {
+    async function question() {
         const answers = await inquirer.prompt({
             name: 'project_name',
             type: 'input',
@@ -16,21 +16,10 @@ if (args[2] == 'new') {
         });
         return createNewProj(answers.project_name);
     }
-    await askNameOfProject();
+    await question();
 }
 else if (args[2] == 'init') {
-    async function askNameOfProject() {
-        const answers = await inquirer.prompt({
-            name: 'project_name',
-            type: 'input',
-            message: 'What is the name of the app?',
-            default() {
-                return 'seasann-app';
-            },
-        });
-        return initProj();
-    }
-    await askNameOfProject();
+    initProj();
 }
 else if (args[2] == '--version' || args[2] == '-V') {
     console.log(version);
