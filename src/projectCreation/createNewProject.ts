@@ -16,7 +16,7 @@ export function createNewProj(name: any) {
   if (args[3] != '--silent') {
     console.log('Next steps:');
     console.log(`\n     cd ${name}`);
-    detect().then((pm) => {
+    detect().then((pm: any) => {
       if (pm == 'npm') {
         console.log('     npm install');
       } else if (pm == 'yarn') {
@@ -28,7 +28,7 @@ export function createNewProj(name: any) {
   }
   if (args[3] == '--verbose') {
     console.log('\nTo build the app');
-    detect().then((pm) => {
+    detect().then((pm: any) => {
       if (pm == 'npm') {
         console.log('\n       npm run build');
       } else if (pm == 'yarn') {
