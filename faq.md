@@ -9,7 +9,7 @@
 
 ## Why?
 
-There are many reasons that i built seasann. 
+There are many reasons that i built seasann.
 
 1. Bulkiness: SSG are getting bulkier, and require hundred, even thousands of dependencies to be run. Seasann is minimal, only requiring the dependencies it needs.
 
@@ -33,6 +33,6 @@ On the backend it uses express.js for a minimal yet reliable backend. It also sy
 
 ### Css?
 
-(Note that automatic CSS is supported from v0.3.0). 
+(Note that automatic CSS is supported from v0.3.0).
 
 Create a file with the same name of the markdown file you want to modify. It will be automatically added to the corresponding html. Styles are scoped to files.
