@@ -5,16 +5,18 @@
 
 ## Create a new project 💾
 
-The package manager of choice is [pnpm](https://pnpm.io). This should also work with regular npm, but we recommend you switch over to pnpm.
+Generate a new project using [npx](https://www.npmjs.com/package/npx). Npx comes bundled with npm version 5.2+. It's also a package for older version.
 
 ```bash
-pnpx seasann new
+npx seasann new
 ```
+
+yarn and pnpm are also options.
 
 If you are already in a directory, run:
 
 ```bash
-pnpx seasann init
+npx seasann init
 ```
 
 ## Using seasann 👨‍💻
@@ -24,7 +26,7 @@ Once the project is generated, go ahead and write some markdown in the pages dir
 Then, once you have finished, run:
 
 ```bash
-pnpm run build
+npm run build
 ```
 
 This will
@@ -39,7 +41,7 @@ Note that if the markdown file is called index, than that will be asigend to the
 Run:
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 This will build and start the express app at localhost 3000. Remeber that every markdown file is a route. For example:

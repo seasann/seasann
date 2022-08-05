@@ -1,22 +1,37 @@
-# Contributing Guiedlines
+# Contributing Guidelines
 
-**NOTE!** These guiedlines are just a framework of rules. If we don't belive that a PR/Issue shloud exist, even if it follows the guiedlines perfectly, we will not accept it and close it. That said if your pr is rejected, don't be demoralized. Ask for some suggestions and apply those suggestions in the future.
+- [Contributing Guidelines](#contributing-guidelines)
+  - [Welcome](#welcome)
+  - [Questions and bugs](#questions-and-bugs)
+    - [I have a Question!](#i-have-a-question)
+    - [I found a bug!](#i-found-a-bug)
+    - [Fixing a bug:](#fixing-a-bug)
+  - [Contributing](#contributing)
+    - [Setup your developement enviorment](#setup-your-developement-enviorment)
+    - [Create a Pull Request.](#create-a-pull-request)
+      - [Create a title](#create-a-title)
 
-**WELCOME!** Thank you so much for helping out! In this guide we will help you open your first question/bug report and make your first contribution!
+**NOTE!** These guidelines are just a framework of rules. If we don't believe that a PR/Issue should exist, even if it follows the guidelines perfectly, we will not accept it. That said if your pr is rejected, don't be demoralized. Ask for some suggestions and apply those suggestions in the future.
 
-## I have a Question!
+## Welcome
 
-The comminity tab is perfect for that! There you can ask questions, propose ideas, and just chat with us!
+Thank you so much for helping out! In this guide we will help you open your first question/bug report and make your first contribution!
 
-## I found a bug!
+## Questions and bugs
 
-First, check the [issues](https://github.com/micziz/seasann/issues) on the [github](https://github.com/micziz/seasann). If you see the same or a similar problem to yours, try commenting on that. We will try to answer in a timely manner, but please be patient. If there are no other issues, you can open one yourself. Please make shore that there are no issues similar to yours oterwise your issue will be closed and marked as duplicate.
+### I have a Question!
 
-All bugtracking happens on the [issues](https://github.com/micziz/seasann/issues) on the [github](https://github.com/micziz/seasann). We provide a template, but feel free to deleate things that are not releavant. Please note that if you deleate information that is critical (eg: How to reproduce it, Version) we will not be able to fix it. After filling the template, submit the issue. In about 24 hours sombady will responded. Please be patient.
+The discussion tab is perfect for that! There you can ask questions, propose ideas, and just chat with us!
 
-## Fixing a bug:
+### I found a bug!
 
-If you belive you have the technical skills to fix a bug please refer to the contributing section.
+First, check the [issues](https://github.com/micziz/seasann/issues) tab on [github](https://github.com/micziz/seasann). If you see the same or a similar problem to yours, look there. We will try to answer in a timely manner, but please be patient. If there are no other issues, you can open one yourself. Please make shore that there are no issues similar to yours otherwise your issue will be closed and marked as duplicate.
+
+All bug tracking happens on the [issues](https://github.com/micziz/seasann/issues) tab on [github](https://github.com/micziz/seasann). We provide a template, but feel free to delete things that are not relevant. Please note that if you delete information that is critical (eg: How to reproduce it, Version) we will not be able to fix it. After filling the template, submit the issue. In about 24 hours somebody will responded. Please be patient.
+
+### Fixing a bug:
+
+If you believe you have the technical skills to fix a bug please refer to the contributing section.
 
 ## Contributing
 
@@ -29,38 +44,44 @@ First, clone the repository. The Version Control System that is prefferd is [git
 To clone the repo type this command:
 
 ```bash
-git clone https://github.com/micziz/seasann
+git clone https://github.com/seasann/seasann.git
 ```
 
 If you want to clone the template used for developing a static site, type in this command:
 
 ```bash
-git clone https://github.com /micziz/seasann-template
+git clone https://github.com/seasann/seasann-template.git
 ```
 
-Once youve cloned the repo, cd into it:
+(Note that there is a TypeScript Version available)
+
+Once you've cloned the repo, cd into it:
 
 ```bash
 cd seasann
 ```
 
-Now we need to install dependencies. The prefferd packge manager is [pnpm](https://pnpm.io). On the CLI side of things, it's pretty minimal, only requiring [inquirer](https://www.npmjs.com/package/inquirer). The template has more depnpendencies. Anyway, install them by running:
+Now we need to install dependencies. The proffered package manager is [pnpm](https://pnpm.io). Install them by running:
 
 ```bash
-pnpm i
+pnpm install
 ```
 
 It will install all the required packages. If you have just installed pnpm, some setup may be required.
 
-One final thing. While you can use whatever text editor/ide, we reccomend the usage of [vscode](https://code.visualstudio.com)
+Typescript is required! Install it using `npm i -g typescript`
 
-Your developer enviorment is setup! Now we can start developing!
+If you want to modify markdown code, install the markdown all in one extension.
+
+One final thing. While you can use whatever text editor/ide, we recommend the usage of [vscode](https://code.visualstudio.com).
+
+Your developer environment is setup! Now we can start developing!
 
 ### Create a Pull Request.
 
 After you have finished developing your code you can open a [pull request](https://github.com/micziz/seasann/pulls) on [github](https://github.com/micziz/seasann).
 
-We offer a template, but feel free to deleate options that are not relevant
+We offer a template, but feel free to delete options that are not relevant
 
 #### Create a title
 
