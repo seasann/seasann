@@ -1,4 +1,5 @@
 import { exec } from 'child_process';
+import { detect } from 'detect-package-manager';
 let args = process.argv;
 
 export function createNewProj(name: any) {
@@ -15,12 +16,39 @@ export function createNewProj(name: any) {
   if (args[3] != '--silent') {
     console.log('Next steps:');
     console.log(`\n     cd ${name}`);
-    console.log('     npm i');
+    detect()
+      .then(pm => {
+        if (pm == "npm"){
+          console.log('     npm install');      
+        } else if (pm == "yarn"){
+          console.log('     yarn install')
+        } else if (pm == "pnpm"){
+          console.log('     pnpm install')
+        }
+    })
   }
   if (args[3] == '--verbose') {
     console.log('\nTo build the app');
-    console.log('\n       npm run build');
+    detect()
+      .then(pm => {
+        if (pm == "npm"){
+          console.log('\n       npm run build');
+        } else if (pm == "yarn"){
+          console.log('\n       yarn build');
+        } else if (pm == "pnpm"){
+          console.log('\n       pnpm build');
+        }
+    })
     console.log('\nTo start a server');
-    console.log('\n       npm run dev\n');
+    detect()
+      .then(pm => {
+        if (pm == "npm"){
+          console.log('\n       npm run dev');
+        } else if (pm == "yarn"){
+          console.log('\n       yarn dev');
+        } else if (pm == "pnpm"){
+          console.log('\n       pnpm dev');
+        }
+    })
   }
 }
