@@ -68,6 +68,12 @@ posts
 
 will correspond to `https://example.com/main`.
 
+## Todo:
+
+- Add global styling
+- Add themes
+
+
 ## Faq
 
 ### Why?
