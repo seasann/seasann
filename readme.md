@@ -70,6 +70,7 @@ will correspond to `https://example.com/main`.
 
 ## Todo:
 
+- Testing (WIP)
 - Add global styling
 - Add themes
 
