@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.5.2
+
+Welcome to the third edition of the changelog!
+
+### Major changes:
+
+- Themes! If there is a pre-done seasann template, you can download it by running `npx seasann new --theme` and then linking the github repo.
+
+### Minor things:
+
+- @LukaHietala did some chores by fixing up config files! Thanks!
+- We added a todo. Now we can track progress of new features. Remember to pop by at the discussion tab to propose new ideas! Thanks
+- Moved the FAQ to it's own file
+- Changes to docs in general
+
 ## 0.5.1
 
 Welcome to the second edition of the changelog!
