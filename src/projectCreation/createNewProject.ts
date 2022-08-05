@@ -4,7 +4,7 @@ let args = process.argv;
 
 export function createNewProj(name: any) {
   exec(
-    `git clone https://github.com/micziz/seasann-template.git ${name}`,
+    `git clone https://github.com/seasann/seasann-template.git ${name}`,
     (error) => {
       if (error) {
         console.log(`error: ${error.message}`);

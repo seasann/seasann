@@ -2,7 +2,7 @@ import { exec } from 'child_process';
 import { detect } from 'detect-package-manager';
 let args = process.argv;
 export function createNewProj(name) {
-    exec(`git clone https://github.com/micziz/seasann-template.git ${name}`, (error) => {
+    exec(`git clone https://github.com/seasann/seasann-template.git ${name}`, (error) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;
