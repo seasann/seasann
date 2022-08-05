@@ -15,6 +15,7 @@
   "license": "Apache-2.0",
   "bin": "./build/index.js",
   "dependencies": {
+    "detect-package-manager": "^2.0.1",
     "inquirer": "^9.0.2"
   },
   "devDependencies": {
