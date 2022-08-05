@@ -26,12 +26,18 @@ Generate a new project using [npx](https://www.npmjs.com/package/npx). Npx comes
 npx seasann new
 ```
 
-Yarn and Pnpx are also supported.
+Yarn and Pnpm are also supported.
 
 If you are already in a directory, run:
 
 ```bash
 npx seasann init
+```
+
+If you want to use a pre-created template, run:
+
+```bash
+npx seasann new --them
 ```
 
 ## Using seasann 👨‍💻
@@ -73,34 +79,6 @@ will correspond to `https://example.com/main`.
 - [x] Add themes
 - [ ] Add global styling
 
-## Faq
+## License
 
-### Why?
-
-1. Bulkiness: SSG are getting bulkier, and require thousands of dependencies
-
-2. Transparency: You just write some markdown and it will be transformed by some complicated cli into strange html.
-
-3. CSS. If you use an SSG today, you are pretty much giving away your control to some theme made by another guy.
-
-Seasann is minimal, transparent and gives you full control over css.
-
-### Author
-
-The project was created and is currently maintained by micziz.
-
-### Can I contribute?
-
-Sure. Please read [contributing.md](contributing.md) before contributing!
-
-### How does the project work?
-
-On the front end it's just html, generated using a markdown to html converter called [marked](https://marked.js.org).
-
-On the backend it uses express.js for a minimal yet reliable backend. It also syncs the frontend pages with the backend routes.
-
-### Css?
-
-(Supported from 0.3.0) Create a file that is the same name from the markdown file you want to modify. It will be added. Styles are scoped.
-
-The project is licensed under the [Apache 2.0 license](LICENSE).
+Apache 2.0
