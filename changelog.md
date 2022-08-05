@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.5.1
+
+Welcome to the second edition of the changelog!
+
+### Major changes:
+
+- We added mostly repo things, like a PR and issue template. We also added dependabot!
+
+### Other changes:
+
+- No new major changes.
+
 ## 0.5.0
 
 Welcome to the first edition of the changelog!
