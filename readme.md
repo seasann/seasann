@@ -3,6 +3,10 @@
     <p>Minimalist and un-opinionated static site generator</p>
 </div>
 
+# STATE OF THE PROJECT
+
+This project is done. I find it really difficult working with javascript, so i'm moving to a new python project. To all contributors, thanks!
+
 ## Introduction
 
 Seasann is a minimalist static site generator that is designed to be as un-opinionated and minimal as possible.
