@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "rootDir": "./src",
     "moduleResolution": "node",
     "baseUrl": "./",
     "allowJs": true,
@@ -12,5 +11,6 @@
     "strict": true,
     "skipLibCheck": true,
     "noUnusedLocals": true
-  }
+  },
+  "include": ["src/**/*"]
 }

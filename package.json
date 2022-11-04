@@ -1,28 +1,30 @@
 {
-  "name": "seasann",
-  "version": "0.5.2-1",
-  "description": "Minimal Static Site Generator",
-  "main": "build/index.js",
+  "name": "create-seasann-app",
+  "version": "1.0.0-beta",
+  "description": "Create a seasann app.",
+  "main": "bundle.js",
   "type": "module",
   "scripts": {
     "prepare": "husky install",
-    "prettier": "prettier --write .",
-    "build-tsc": "tsc -b",
-    "build": "rm -rf build && prettier --write . && tsc -b"
+    "lint": "prettier --write .",
+    "build-tsc": "tsc",
+    "build": "rimraf build && pnpm lint && tsc && rollup --config && rimraf build"
   },
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
-  "bin": "./build/index.js",
+  "bin": ".bundle.js",
   "dependencies": {
-    "detect-package-manager": "^2.0.1",
-    "inquirer": "^9.0.2"
+    "inquirer": "^9.1.4",
+    "node-async-exec": "^1.2.0"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.0",
+    "@types/inquirer": "^9.0.2",
     "@types/node": "^18.6.4",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.2.5",
     "typescript": "^4.7.4"
   }
 }

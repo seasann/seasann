@@ -3,8 +3,4 @@ export function help() {
   console.log('   --help, -h: Print this message and exit');
   console.log('   --version, -V: Print version and exit');
   console.log('   --ts: add typescript.');
-  console.log('   new: Create a new project');
-  console.log(
-    '   init: Initialize new project in the current working directory'
-  );
 }
