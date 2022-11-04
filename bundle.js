@@ -20,10 +20,10 @@ async function createNewProj(name) {
             throw Error('Curl is not installed, or you do not have an internet connection active.');
         }
         try {
-            await exec({ cmd: `unzip main.zip` });
+            await exec({ cmd: `tar -xf main.tar.gz` });
         }
         catch {
-            throw Error('Unzip is not installed.');
+            throw Error('Tar is not installed.');
         }
         try {
             await exec({ cmd: `mv seasann-template-ts-main ${name}` });
@@ -42,10 +42,10 @@ async function createNewProj(name) {
             throw Error('Curl is not installed, or you do not have an internet connection active.');
         }
         try {
-            await exec({ cmd: `unzip main.zip` });
+            await exec({ cmd: `tar -xf main.tar.gz` });
         }
         catch {
-            throw Error('Unzip is not installed.');
+            throw Error('Tar is not installed.');
         }
         try {
             await exec({ cmd: `mv seasann-template-ts-main ${name}` });
