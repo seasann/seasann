@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
-  "bin": ".bundle.js",
+  "bin": "./bundle.js",
   "dependencies": {
     "inquirer": "^9.1.4",
     "node-async-exec": "^1.2.0"
