@@ -1,11 +1,11 @@
 <div align="center">
-    <h1>Seasann</h1>
-    <p>Minimalist and un-opinionated static site generator</p>
+    <h1>Create Seasann App</h1>
+    <p>Create your own seasann app now!</p>
 </div>
 
-# STATE OF THE PROJECT
+# NOTE
 
-This project is done. I find it really difficult working with javascript, so i'm moving to a new python project. To all contributors, thanks!
+Seassan is under reconstruction, and will be unusable for the time being. Please sand by!
 
 ## Introduction
 
@@ -15,10 +15,11 @@ Seasann is built with TypeScript.
 
 ## Prerequisites
 
-You need to have the following packages installed:
+`create-seassan-app` requires:
 
-- [Node.js](https://nodejs.org)
-- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org) at least version 12 (due to top level await)
+- [Curl](https://curl.se)
+- [Tar](https://www.gnu.org/software/tar/)
 - [NPM](https://www.npmjs.com)
 - [NPX](https://docs.npmjs.com/cli/v7/commands/npx/)
 
@@ -27,61 +28,32 @@ You need to have the following packages installed:
 Generate a new project using [npx](https://www.npmjs.com/package/npx). Npx comes bundled with npm version 5.2+. It's also a package for older version.
 
 ```bash
-npx seasann new
+npx create-seasann-app
 ```
 
-Yarn and Pnpm are also supported.
-
-If you are already in a directory, run:
+Yarn 
 
 ```bash
-npx seasann init
+yarn create create-seasann-app
 ```
 
-If you want to use a pre-created template, run:
+Pnpm
 
 ```bash
-npx seasann new --them
+pnpm create create-seasann-app
 ```
 
-## Using seasann 👨‍💻
-
-Once the project is generated, go ahead and write some markdown in the pages directory!
-
-Then, once you have finished, run:
+To generate with typescript:
 
 ```bash
-npm run build
+npx create-seasann-app --ts
 ```
 
-This will
-
-1. Go through your pages directory and convert them to html.
-2. Assign each page a route in the express app that is in express.js
-
-Note that if the markdown file is called index, than that will be asigend to the / route.
-
-## Running the site ⚙️
-
-Run:
+For a full list of commands:
 
 ```bash
-npm run dev
+npx create-seasann-app --help
 ```
-
-This will build and start the express app at localhost 3000. Remember that every markdown file is a route. For example:
-
-```
-posts
-└───main.md
-```
-
-will correspond to `https://example.com/main`.
-
-## Todo:
-
-- [x] Add themes
-- [ ] Add global styling
 
 ## License
 
