@@ -13,9 +13,9 @@ export async function createNewProj(name: string) {
       );
     }
     try {
-      await exec({ cmd: `unzip main.zip` });
+      await exec({ cmd: `tar -xf main.tar.gz` });
     } catch {
-      throw Error('Unzip is not installed.');
+      throw Error('Tar is not installed.');
     }
     try {
       await exec({ cmd: `mv seasann-template-ts-main ${name}` });
@@ -33,9 +33,9 @@ export async function createNewProj(name: string) {
       );
     }
     try {
-      await exec({ cmd: `unzip main.zip` });
+      await exec({ cmd: `tar -xf main.tar.gz` });
     } catch {
-      throw Error('Unzip is not installed.');
+      throw Error('Tar is not installed.');
     }
     try {
       await exec({ cmd: `mv seasann-template-ts-main ${name}` });
