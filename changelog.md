@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.0
+
+Welcome to 1.0.0 version!
+
+### Major changes
+
+-   Completely change to the template
+-   Remove express and add vite for serving
+-   Put everything in this cli.
+
+
 ## 0.5.2
 
 Welcome to the third edition of the changelog!
