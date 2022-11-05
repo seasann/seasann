@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+Fix a small bug
+
 ## 1.0.0
 
 Welcome to 1.0.0 version!
@@ -9,7 +13,6 @@ Welcome to 1.0.0 version!
 -   Completely change to the template
 -   Remove express and add vite for serving
 -   Put everything in this cli.
-
 
 ## 0.5.2
 

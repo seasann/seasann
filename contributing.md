@@ -1,15 +1,15 @@
 # Contributing Guidelines
 
-- [Contributing Guidelines](#contributing-guidelines)
-  - [Welcome](#welcome)
-  - [Questions and bugs](#questions-and-bugs)
-    - [Question](#question)
-    - [Bug reporting](#bug-reporting)
-  - [Contributing](#contributing)
-    - [Setup your development environment](#setup-your-development-environment)
-    - [Before submitting](#before-submitting)
-    - [Create a Pull Request](#create-a-pull-request)
-      - [Create a title](#create-a-title)
+-   [Contributing Guidelines](#contributing-guidelines)
+    -   [Welcome](#welcome)
+    -   [Questions and bugs](#questions-and-bugs)
+        -   [Question](#question)
+        -   [Bug reporting](#bug-reporting)
+    -   [Contributing](#contributing)
+        -   [Setup your development environment](#setup-your-development-environment)
+        -   [Before submitting](#before-submitting)
+        -   [Create a Pull Request](#create-a-pull-request)
+            -   [Create a title](#create-a-title)
 
 **NOTE!** These guidelines are just a framework of rules. If we don't believe that a PR/Issue should exist, even if it follows the guidelines perfectly, we will not accept it. That said if your pr is rejected, don't be demoralized. Ask for some suggestions and apply those suggestions in the future.
 

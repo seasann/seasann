@@ -35,7 +35,7 @@ async function rmFile() {
     }
 }
 
-async function execute(err, cmd) {
+async function execute(cmd, err) {
     try {
         await exec({
             cmd: cmd,

@@ -1,6 +1,6 @@
 import exec from 'node-async-exec';
 
-export async function execute(err: string, cmd: string) {
+export async function execute(cmd: string, err: string) {
     try {
         await exec({
             cmd: cmd,
