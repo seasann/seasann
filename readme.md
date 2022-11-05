@@ -31,7 +31,7 @@ Generate a new project using [npx](https://www.npmjs.com/package/npx). Npx comes
 npx create-seasann-app
 ```
 
-Yarn 
+Yarn
 
 ```bash
 yarn create create-seasann-app

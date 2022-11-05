@@ -1,5 +1,8 @@
 import exec from 'node-async-exec';
 import inquirer from 'inquirer';
+import { readFile, writeFile, readdir } from 'fs/promises';
+import { parse } from 'path';
+import { micromark } from 'micromark';
 
 function help() {
     console.log('Usage: node . command [options]');
@@ -99,6 +102,30 @@ async function getProjName() {
     return projectName;
 }
 
+async function handleFile(file) {
+    try {
+        let content = await readFile(`./posts/${file}`);
+        let compiled = micromark(content);
+        let fileWitOutExt = parse(file).name;
+        try {
+            await writeFile(`./app/${fileWitOutExt}.html`, compiled);
+        }
+        catch (err) {
+            throw Error('Create a app directory!');
+        }
+    }
+    catch (err) {
+        console.error(err);
+    }
+}
+
+async function compile() {
+    let files = await readdir('./posts');
+    files.forEach(async (element) => {
+        await handleFile(element);
+    });
+}
+
 const argv = process.argv;
 if (argv[2] == '--help') {
     help();
@@ -106,7 +133,10 @@ if (argv[2] == '--help') {
 else if (argv[2] == '--version') {
     console.log('1.0.0-beta');
 }
-else {
+else if (argv[2] == 'create') {
     let name = await getProjName();
     await createNewProj(name);
+}
+else if (argv[2] == 'compile') {
+    await compile();
 }

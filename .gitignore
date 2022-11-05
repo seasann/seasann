@@ -3,3 +3,5 @@ node_modules
 replit.nix
 package-lock.json
 yarn.lock
+posts
+app
