@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+Changelog:
+    * Add comments (7d285e9)
+
 ## 1.0.1
 
 Fix a small bug
