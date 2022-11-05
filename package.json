@@ -1,6 +1,6 @@
 {
     "name": "seasann",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Full seassan cli",
     "main": "bundle.js",
     "type": "module",
