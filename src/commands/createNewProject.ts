@@ -1,6 +1,11 @@
 import { renameDir, rmFile } from '../utils/renamdAndRm.js';
 import { execute } from '../utils/exec.js';
 
+
+/**
+ * @param  {string} name
+ * Creates a new project
+ */
 export async function createNewProj(name: string) {
     await execute(
         'curl -sL https://github.com/seasann/seasann-template/archive/refs/heads/main.tar.gz -o main.tar.gz',

@@ -2,6 +2,10 @@ import { parse } from 'path';
 import { readFile, writeFile } from 'fs/promises';
 import { micromark } from 'micromark';
 
+/**
+ * @param  {string} file
+ * Handles every file in the posts directory
+ */
 export async function handleFile(file: string) {
     try {
         const content = await readFile(`./posts/${file}`);

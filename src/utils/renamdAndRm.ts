@@ -1,13 +1,20 @@
 import { rename, rm } from 'fs/promises';
 
-export async function renameDir(name: string) {
+/**
+ * @param  {string} dir
+ * Renames downloaded directory to another one!
+ */
+export async function renameDir(dir: string) {
     try {
-        await rename('./seasann-template-main', `./${name}`);
+        await rename('./seasann-template-main', `./${dir}`);
     } catch {
         throw Error('Error renaming your project.');
     }
 }
 
+/**
+ * Removes ./main.tar.gz
+ */
 export async function rmFile() {
     try {
         await rm('./main.tar.gz');
