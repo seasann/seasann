@@ -1,6 +1,6 @@
+import { rename, rm, readFile, writeFile, readdir } from 'fs/promises';
 import exec from 'node-async-exec';
 import inquirer from 'inquirer';
-import { readFile, writeFile, readdir } from 'fs/promises';
 import { parse } from 'path';
 import { micromark } from 'micromark';
 
@@ -11,52 +11,39 @@ function help() {
     console.log('   --ts: add typescript.');
 }
 
-let args = process.argv;
+async function renameDir(name) {
+    try {
+        await rename('./seasann-template-main', `./${name}`);
+    }
+    catch {
+        throw Error('Error renaming your project.');
+    }
+}
+async function rmFile() {
+    try {
+        await rm('./main.tar.gz');
+    }
+    catch {
+        throw Error('Error removing tar file');
+    }
+}
+
+async function execute(err, cmd) {
+    try {
+        await exec({
+            cmd: cmd,
+        });
+    }
+    catch {
+        throw Error(err);
+    }
+}
+
 async function createNewProj(name) {
-    if (args[2] == '--ts') {
-        try {
-            await exec({
-                cmd: `curl -sL https://github.com/seasann/seasann-template-ts/archive/refs/heads/main.tar.gz -o main.tar.gz`,
-            });
-        }
-        catch {
-            throw Error('Curl is not installed, or you do not have an internet connection active.');
-        }
-        try {
-            await exec({ cmd: `tar -xf main.tar.gz` });
-        }
-        catch {
-            throw Error('Tar is not installed.');
-        }
-        try {
-            await exec({ cmd: `mv seasann-template-ts-main ${name}` });
-        }
-        catch {
-            throw Error('Error in renaming your project.');
-        }
-    }
-    else {
-        try {
-            await exec({
-                cmd: `curl -sL https://github.com/seasann/seasann-template/archive/refs/heads/main.tar.gz -o main.tar.gz`,
-            });
-        }
-        catch {
-            throw Error('Curl is not installed, or you do not have an internet connection active.');
-        }
-        try {
-            await exec({ cmd: `tar -xf main.tar.gz` });
-        }
-        catch {
-            throw Error('Tar is not installed.');
-        }
-        try {
-            await exec({ cmd: `mv seasann-template-ts-main ${name}` });
-        }
-        catch {
-            throw Error('Error in renaming your project.');
-        }
-    }
+    await execute('curl -sL https://github.com/seasann/seasann-template/archive/refs/heads/main.tar.gz -o main.tar.gz', 'Error downloading template. You may not have curl installed');
+    await execute('tar -xf main.tar.gz', 'Error unzipping the dowloaded template. You may not have tar installed');
+    await renameDir(name);
+    await rmFile();
     console.log(`Done! Project created at ${name}`);
     const userAgent = process.env.npm_config_user_agent;
     console.log('Next steps:');
