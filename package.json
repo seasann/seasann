@@ -5,7 +5,7 @@
     "main": "bundle.js",
     "type": "module",
     "scripts": {
-        "build": "rimraf build && pnpm lint && tsc && rollup --config && rimraf build",
+        "build": "rimraf build && pnpm lint && eslint src --fix && tsc && rollup --config && rimraf build",
         "build-tsc": "tsc",
         "lint": "prettier --write .",
         "check": "eslint src"

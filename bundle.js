@@ -5,23 +5,32 @@ import { parse } from 'path';
 import { micromark } from 'micromark';
 
 function help() {
-    console.log('Usage: node . command [options]');
-    console.log('   --help, -h: Print this message and exit');
-    console.log('   --version, -V: Print version and exit');
-    console.log('   --ts: add typescript.');
+    const message = `
+Usage: seasann command || Options
+  Commands:
+    create: Create a new seasann app
+    compile: Compile markdown to html
+    
+  Options:
+    --help: Print this message and exit
+    --version: Print version and exit
+`;
+    console.log(message);
 }
 
 async function renameDir(name) {
     try {
         await rename('./seasann-template-main', `./${name}`);
-    } catch {
+    }
+    catch {
         throw Error('Error renaming your project.');
     }
 }
 async function rmFile() {
     try {
         await rm('./main.tar.gz');
-    } catch {
+    }
+    catch {
         throw Error('Error removing tar file');
     }
 }
@@ -31,20 +40,15 @@ async function execute(err, cmd) {
         await exec({
             cmd: cmd,
         });
-    } catch {
+    }
+    catch {
         throw Error(err);
     }
 }
 
 async function createNewProj(name) {
-    await execute(
-        'curl -sL https://github.com/seasann/seasann-template/archive/refs/heads/main.tar.gz -o main.tar.gz',
-        'Error downloading template. You may not have curl installed'
-    );
-    await execute(
-        'tar -xf main.tar.gz',
-        'Error unzipping the dowloaded template. You may not have tar installed'
-    );
+    await execute('curl -sL https://github.com/seasann/seasann-template/archive/refs/heads/main.tar.gz -o main.tar.gz', 'Error downloading template. You may not have curl installed');
+    await execute('tar -xf main.tar.gz', 'Error unzipping the dowloaded template. You may not have tar installed');
     await renameDir(name);
     await rmFile();
     console.log(`Done! Project created at ${name}`);
@@ -56,18 +60,21 @@ async function createNewProj(name) {
       cd ${name}
       yarn install
       `);
-        } else if (userAgent.startsWith('pnpm')) {
-            console.log(`
-      cd ${name}
-      pnpm install
-      `);
-        } else {
+        }
+        else if (userAgent.startsWith('pnpm')) {
             console.log(`
       cd ${name}
       pnpm install
       `);
         }
-    } else {
+        else {
+            console.log(`
+      cd ${name}
+      pnpm install
+      `);
+        }
+    }
+    else {
         // If no user agent is set, assume npm
         console.log(`
       cd ${name}
@@ -85,27 +92,29 @@ async function getProjName() {
             return 'seassan-app';
         },
     });
-    let projectName = answer.projectName;
+    const projectName = answer.projectName;
     return projectName;
 }
 
 async function handleFile(file) {
     try {
-        let content = await readFile(`./posts/${file}`);
-        let compiled = micromark(content);
-        let fileWitOutExt = parse(file).name;
+        const content = await readFile(`./posts/${file}`);
+        const compiled = micromark(content);
+        const fileWitOutExt = parse(file).name;
         try {
             await writeFile(`./app/${fileWitOutExt}.html`, compiled);
-        } catch (err) {
+        }
+        catch (err) {
             throw Error('Create a app directory!');
         }
-    } catch (err) {
+    }
+    catch (err) {
         console.error(err);
     }
 }
 
 async function compile() {
-    let files = await readdir('./posts');
+    const files = await readdir('./posts');
     files.forEach(async (element) => {
         await handleFile(element);
     });
@@ -114,11 +123,14 @@ async function compile() {
 const argv = process.argv;
 if (argv[2] == '--help') {
     help();
-} else if (argv[2] == '--version') {
+}
+else if (argv[2] == '--version') {
     console.log('1.0.0-beta');
-} else if (argv[2] == 'create') {
-    let name = await getProjName();
+}
+else if (argv[2] == 'create') {
+    const name = await getProjName();
     await createNewProj(name);
-} else if (argv[2] == 'compile') {
+}
+else if (argv[2] == 'compile') {
     await compile();
 }

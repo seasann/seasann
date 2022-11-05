@@ -1,15 +1,15 @@
 # Contributing Guidelines
 
--   [Contributing Guidelines](#contributing-guidelines)
-    -   [Welcome](#welcome)
-    -   [Questions and bugs](#questions-and-bugs)
-        -   [I have a Question](#i-have-a-question)
-        -   [I found a bug](#i-found-a-bug)
-        -   [Fixing a bug](#fixing-a-bug)
-    -   [Contributing](#contributing)
-        -   [Setup your development environment](#setup-your-development-environment)
-        -   [Create a Pull Request](#create-a-pull-request)
-            -   [Create a title](#create-a-title)
+- [Contributing Guidelines](#contributing-guidelines)
+  - [Welcome](#welcome)
+  - [Questions and bugs](#questions-and-bugs)
+    - [Question](#question)
+    - [Bug reporting](#bug-reporting)
+  - [Contributing](#contributing)
+    - [Setup your development environment](#setup-your-development-environment)
+    - [Before submitting](#before-submitting)
+    - [Create a Pull Request](#create-a-pull-request)
+      - [Create a title](#create-a-title)
 
 **NOTE!** These guidelines are just a framework of rules. If we don't believe that a PR/Issue should exist, even if it follows the guidelines perfectly, we will not accept it. That said if your pr is rejected, don't be demoralized. Ask for some suggestions and apply those suggestions in the future.
 
@@ -19,19 +19,24 @@ Thank you so much for helping out! In this guide we will help you open your firs
 
 ## Questions and bugs
 
-### I have a Question
+### Question
 
 The discussion tab is perfect for that! There you can ask questions, propose ideas, and just chat with us!
 
-### I found a bug
+### Bug reporting
 
-First, check the [issues](https://github.com/micziz/seasann/issues) tab on [github](https://github.com/seasann/seasann). If you see the same or a similar problem to yours, look there. We will try to answer in a timely manner, but please be patient. If there are no other issues, you can open one yourself. Please make shore that there are no issues similar to yours otherwise your issue will be closed and marked as duplicate.
+First, check the [issues](https://github.com/micziz/seasann/issues) tab on [github](https://github.com/seasann/seasann). If you see the same or a similar problem to yours, look there. If there are no other issues, you can open one yourself. Please make sure that there are no issues similar to yours otherwise your issue will be closed and marked as duplicate.
 
-All bug tracking happens on the [issues](https://github.com/seasann/seasann/issues) tab on [github](https://github.com/seasann/seasann). We provide a template, but feel free to delete things that are not relevant. Please note that if you delete information that is critical (eg: How to reproduce it, Version) we will not be able to fix it. After filling the template, submit the issue. In about 24 hours somebody will responded. Please be patient.
+All bug tracking happens on the [issues](https://github.com/seasann/seasann/issues) tab on [github](https://github.com/seasann/seasann). Here are some reccomendations for creating a good github issues:
 
-### Fixing a bug
+We will try to answer in a timely manner, but please be patient.
 
-If you believe you have the technical skills to fix a bug please refer to the contributing section.
+-   Use a clear and descriptive title for the issue to identify the problem.
+-   Explain the behavior you expected to see instead and why.
+-   Then explain what the actual behavior was.
+-   Describe the exact steps to reproduce the problem in as many details as possible. For example, what command you used, if you changed something etc..
+-   Provide specific examples to demonstrate the steps. If you're providing snippets in the issue, use Markdown code blocks.
+-   Provide version info for seasann, node, npm etc... depending on what seems necessary.
 
 ## Contributing
 
@@ -39,49 +44,35 @@ Thanks for contributing! There are some things you need to do before you contrib
 
 ### Setup your development environment
 
-First, clone the repository. The Version Control System that is preferred is [git](https://git-scm.com).
-
-To clone the repo type this command:
+First, clone the repository.
 
 ```bash
 git clone https://github.com/seasann/seasann.git
 ```
 
-If you want to clone the template used for developing a static site, type in this command:
+For modifying the template:
 
 ```bash
 git clone https://github.com/seasann/seasann-template.git
 ```
 
-(Note that there is a TypeScript Version available)
-
-Once you've cloned the repo, cd into it:
+Then cd into the directory and install dependencies:
 
 ```bash
 cd seasann
 ```
 
-Now we need to install dependencies. The preferred package manager is [npm](https://www.npmjs.com/), but you can still use [yarn](https://yarnpkg.com/) or [pnpm](https://pnpm.js.org/).
-
-```bash
-npm install
-```
-
-If you get errors with typescript, install it globally using:
-
-```bash
-npm i -g typescript
-```
-
-One final thing. While you can use text editor/IDE of your choice, we recommend the usage of [VS Code](https://code.visualstudio.com).
+One final thing. While you can use text editor/IDE of your choice, but we recommend the usage of [VS Code](https://code.visualstudio.com).
 
 Your developer environment is setup! Now we can start developing!
+
+### Before submitting
+
+Before submitting a pull request please run `npm run build` to lint, check and build into a bundle.
 
 ### Create a Pull Request
 
 After you have finished developing your code you can open a [pull request](https://github.com/seasann/seasann/pulls) on [github](https://github.com/seasann/seasann).
-
-We offer a template, but feel free to delete options that are not relevant
 
 #### Create a title
 
@@ -108,3 +99,5 @@ Make sure also that:
 -   You are merging your branch into the develop branch
 -   You link any issues that are resolved or fixed by your changes. (this is done by typing "Fixes #<issue number>") in your pull request
 -   Where possible, you have used git pull --rebase, to avoid creating unnecessary merge commits
+-   Use the present tense ("Add feature" not "Added feature")
+-   Use the imperative mood ("Change function to..." not "Changes function to...")
