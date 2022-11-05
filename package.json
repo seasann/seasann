@@ -1,6 +1,6 @@
 {
   "name": "seasann",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "Create a seasann app.",
   "main": "bundle.js",
   "type": "module",
