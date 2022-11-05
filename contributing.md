@@ -1,15 +1,15 @@
 # Contributing Guidelines
 
-- [Contributing Guidelines](#contributing-guidelines)
-  - [Welcome](#welcome)
-  - [Questions and bugs](#questions-and-bugs)
-    - [I have a Question](#i-have-a-question)
-    - [I found a bug](#i-found-a-bug)
-    - [Fixing a bug](#fixing-a-bug)
-  - [Contributing](#contributing)
-    - [Setup your development environment](#setup-your-development-environment)
-    - [Create a Pull Request](#create-a-pull-request)
-      - [Create a title](#create-a-title)
+-   [Contributing Guidelines](#contributing-guidelines)
+    -   [Welcome](#welcome)
+    -   [Questions and bugs](#questions-and-bugs)
+        -   [I have a Question](#i-have-a-question)
+        -   [I found a bug](#i-found-a-bug)
+        -   [Fixing a bug](#fixing-a-bug)
+    -   [Contributing](#contributing)
+        -   [Setup your development environment](#setup-your-development-environment)
+        -   [Create a Pull Request](#create-a-pull-request)
+            -   [Create a title](#create-a-title)
 
 **NOTE!** These guidelines are just a framework of rules. If we don't believe that a PR/Issue should exist, even if it follows the guidelines perfectly, we will not accept it. That said if your pr is rejected, don't be demoralized. Ask for some suggestions and apply those suggestions in the future.
 
@@ -87,17 +87,17 @@ We offer a template, but feel free to delete options that are not relevant
 
 Pull requests require great titles. Here are some prefix for titles:
 
-- **feat**: New feature
+-   **feat**: New feature
 
-- **docs**: Modification to documents/documentations
+-   **docs**: Modification to documents/documentations
 
-- **fix**: Small bugfix
+-   **fix**: Small bugfix
 
-- **style**: Formatting changes witch does not impact code
+-   **style**: Formatting changes witch does not impact code
 
-- **refactor**: Refactored code
+-   **refactor**: Refactored code
 
-- **chore**: Updating configs, workflows etc. Does not impact code.
+-   **chore**: Updating configs, workflows etc. Does not impact code.
 
 So the title should be:
 
@@ -105,6 +105,6 @@ So the title should be:
 
 Make sure also that:
 
-- You are merging your branch into the develop branch
-- You link any issues that are resolved or fixed by your changes. (this is done by typing "Fixes #<issue number>") in your pull request
-- Where possible, you have used git pull --rebase, to avoid creating unnecessary merge commits
+-   You are merging your branch into the develop branch
+-   You link any issues that are resolved or fixed by your changes. (this is done by typing "Fixes #<issue number>") in your pull request
+-   Where possible, you have used git pull --rebase, to avoid creating unnecessary merge commits

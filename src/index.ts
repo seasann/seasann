@@ -6,12 +6,12 @@ import { compile } from './commands/compile.js';
 const argv = process.argv;
 
 if (argv[2] == '--help') {
-  help();
+    help();
 } else if (argv[2] == '--version') {
-  console.log('1.0.0-beta');
+    console.log('1.0.0-beta');
 } else if (argv[2] == 'create') {
-  let name = await getProjName();
-  await createNewProj(name);
+    const name = await getProjName();
+    await createNewProj(name);
 } else if (argv[2] == 'compile') {
-  await compile();
+    await compile();
 }

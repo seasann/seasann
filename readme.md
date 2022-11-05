@@ -1,6 +1,6 @@
 <div align="center">
-    <h1>Create Seasann App</h1>
-    <p>Create your own seasann app now!</p>
+    <h1>Seasann</h1>
+    <p>A minimalistic static site generator</p>
 </div>
 
 # NOTE
@@ -9,50 +9,50 @@ Seassan is under reconstruction, and will be unusable for the time being. Please
 
 ## Introduction
 
-Seasann is a minimalist static site generator that is designed to be as un-opinionated and minimal as possible.
+Seasann is a static site generator that is designed to be as un-opinionated and minimal as possible.
 
 Seasann is built with TypeScript.
 
 ## Prerequisites
 
-`create-seassan-app` requires:
+`seassan` requires:
 
-- [Node.js](https://nodejs.org) at least version 12 (due to top level await)
-- [Curl](https://curl.se)
-- [Tar](https://www.gnu.org/software/tar/)
-- [NPM](https://www.npmjs.com)
-- [NPX](https://docs.npmjs.com/cli/v7/commands/npx/)
+-   [Node.js](https://nodejs.org) at least version 12 (due to top level await)
+-   [Curl](https://curl.se)
+-   [Tar](https://www.gnu.org/software/tar/)
+-   [NPM](https://www.npmjs.com)
+-   [NPX](https://docs.npmjs.com/cli/v7/commands/npx/)
 
 ## Create a new project 💾
 
-Generate a new project using [npx](https://www.npmjs.com/package/npx). Npx comes bundled with npm version 5.2+. It's also a package for older version.
+First install the cli
 
 ```bash
-npx create-seasann-app
+npm i -g seasann
 ```
 
-Yarn
+Then use `seasann create` to create an application
 
 ```bash
-yarn create create-seasann-app
+seasann create
 ```
 
-Pnpm
+## Usage
+
+All markdown content is contained in the posts directory.
+
+When you run `npm run dev` it will first run `seasann compile` to compile your markdwon, then it will serve your app, seasann uses vite, but is frontend toll agnostic.
 
 ```bash
-pnpm create create-seasann-app
+npm run dev
 ```
 
-To generate with typescript:
+## Build
+
+If you want to build the app use `npm run build`
 
 ```bash
-npx create-seasann-app --ts
-```
-
-For a full list of commands:
-
-```bash
-npx create-seasann-app --help
+npm run build
 ```
 
 ## License

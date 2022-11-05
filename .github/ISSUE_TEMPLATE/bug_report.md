@@ -26,9 +26,9 @@ If applicable, add screenshots to help explain your problem.
 
 ## Desktop (please complete the following information):
 
-- OS: [e.g. Linux]
-- Node/Npm version (depending on what seems relevant)
-- Version [e.g. 22]
+-   OS: [e.g. Linux]
+-   Node/Npm version (depending on what seems relevant)
+-   Version [e.g. 22]
 
 ## Additional context
 

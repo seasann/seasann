@@ -6,14 +6,14 @@ Welcome to the third edition of the changelog!
 
 ### Major changes:
 
-- Themes! If there is a pre-done seasann template, you can download it by running `npx seasann new --theme` and then linking the github repo.
+-   Themes! If there is a pre-done seasann template, you can download it by running `npx seasann new --theme` and then linking the github repo.
 
 ### Minor things:
 
-- @LukaHietala did some chores by fixing up config files! Thanks!
-- We added a todo. Now we can track progress of new features. Remember to pop by at the discussion tab to propose new ideas! Thanks
-- Moved the FAQ to it's own file
-- Changes to docs in general
+-   @LukaHietala did some chores by fixing up config files! Thanks!
+-   We added a todo. Now we can track progress of new features. Remember to pop by at the discussion tab to propose new ideas! Thanks
+-   Moved the FAQ to it's own file
+-   Changes to docs in general
 
 ## 0.5.1
 
@@ -21,11 +21,11 @@ Welcome to the second edition of the changelog!
 
 ### Major changes:
 
-- We added mostly repo things, like a PR and issue template. We also added dependabot!
+-   We added mostly repo things, like a PR and issue template. We also added dependabot!
 
 ### Other changes:
 
-- No new major changes.
+-   No new major changes.
 
 ## 0.5.0
 
@@ -33,20 +33,20 @@ Welcome to the first edition of the changelog!
 
 ### Major changes
 
-- We moved to Typescript! This means new files, new directory (build, where the js is built) and new scripts.
-- Divided in more functional and more files.
-- Added husky and prettier for better code readability.
-- Add a changelog
+-   We moved to Typescript! This means new files, new directory (build, where the js is built) and new scripts.
+-   Divided in more functional and more files.
+-   Added husky and prettier for better code readability.
+-   Add a changelog
 
 ### New features
 
-- Select your package manager
-- Typescript in the template (at your choice)
-- More cli options.
+-   Select your package manager
+-   Typescript in the template (at your choice)
+-   More cli options.
 
 ### Minor fixes
 
-- Fixes in the documentation.
+-   Fixes in the documentation.
 
 ### New Contributors
 

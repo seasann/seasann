@@ -1,6 +1,13 @@
 export function help() {
-  console.log('Usage: node . command [options]');
-  console.log('   --help, -h: Print this message and exit');
-  console.log('   --version, -V: Print version and exit');
-  console.log('   --ts: add typescript.');
+    const message = `
+Usage: seasann command || Options
+  Commands:
+    create: Create a new seasann app
+    compile: Compile markdown to html
+    
+  Options:
+    --help: Print this message and exit
+    --version: Print version and exit
+`;
+    console.log(message);
 }
