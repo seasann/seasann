@@ -1,6 +1,6 @@
 import { renameDir, rmFile } from '../utils/renamdAndRm.js';
 import { execute } from '../utils/exec.js';
-
+import { extract } from '../utils/extract.js';
 
 /**
  * @param  {string} name
@@ -11,8 +11,8 @@ export async function createNewProj(name: string) {
         'curl -sL https://github.com/seasann/seasann-template/archive/refs/heads/main.tar.gz -o main.tar.gz',
         'Error downloading template. You may not have curl installed'
     );
-    await execute(
-        'tar -xf main.tar.gz',
+    await extract(
+        'main.tar.gz',
         'Error unzipping the dowloaded template. You may not have tar installed'
     );
     await renameDir(name);

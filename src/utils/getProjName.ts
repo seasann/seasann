@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 
 /**
- * Asks the user the name of the app 
+ * Asks the user the name of the app
  */
 export async function getProjName() {
     // Prompt using inquirer

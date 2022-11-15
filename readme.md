@@ -3,9 +3,6 @@
     <p>A minimalistic static site generator</p>
 </div>
 
-# NOTE
-
-Seassan is under reconstruction, and will be unusable for the time being. Please sand by!
 
 ## Introduction
 
@@ -14,6 +11,8 @@ Seasann is a static site generator that is designed to be as un-opinionated and 
 Seasann is built with TypeScript.
 
 ## Prerequisites
+
+Seassan works only on MacOS 
 
 `seassan` requires:
 

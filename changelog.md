@@ -1,9 +1,13 @@
 # Changelog
 
+
+## 1.0.3
+
+Add tar so not dependant on commands.
+
 ## 1.0.2
 
-Changelog:
-    * Add comments (7d285e9)
+Changelog: \* Add comments (7d285e9)
 
 ## 1.0.1
 
@@ -15,9 +19,9 @@ Welcome to 1.0.0 version!
 
 ### Major changes
 
--   Completely change to the template
--   Remove express and add vite for serving
--   Put everything in this cli.
+- Completely change to the template
+- Remove express and add vite for serving
+- Put everything in this cli.
 
 ## 0.5.2
 
