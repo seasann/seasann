@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.1.0
+
+Make seassan compleatly cross platform!
+
 ## 1.0.3
 
 Add tar so not dependant on commands.

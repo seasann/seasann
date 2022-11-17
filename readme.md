@@ -11,8 +11,6 @@ Seasann is built with TypeScript.
 
 ## Prerequisites
 
-Seassan works only on MacOS
-
 `seassan` requires:
 
 -   [Node.js](https://nodejs.org) at least version 12 (due to top level await)
