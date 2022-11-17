@@ -5,10 +5,11 @@
     "main": "bundle.js",
     "type": "module",
     "scripts": {
-        "build": "rimraf build && pnpm lint && eslint src --fix && tsc && rollup --config && rimraf build",
+        "build": "rimraf build && pnpm lint && pnpm fix && tsc && rollup --config && rimraf build",
         "build-tsc": "tsc",
         "lint": "prettier --write .",
-        "check": "eslint src"
+        "check": "eslint src",
+        "fix": "eslint src --fix"
     },
     "keywords": [],
     "author": "",
@@ -17,11 +18,10 @@
         "seasann": "./bundle.js"
     },
     "dependencies": {
+        "giget": "^1.0.0",
         "inquirer": "^9.1.4",
         "micromark": "^3.1.0",
-        "node-async-exec": "^1.2.0",
-        "rm-rf-async": "^1.2.0",
-        "tar": "^6.1.12"
+        "rm-rf-async": "^1.2.0"
     },
     "devDependencies": {
         "@types/inquirer": "^9.0.2",

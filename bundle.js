@@ -1,6 +1,5 @@
-import { rename, rm, readFile, writeFile, readdir } from 'fs/promises';
-import exec from 'node-async-exec';
-import tar from 'tar';
+import { rename, readFile, writeFile, readdir } from 'fs/promises';
+import { downloadTemplate } from 'giget';
 import inquirer from 'inquirer';
 import { parse } from 'path';
 import { micromark } from 'micromark';
@@ -25,21 +24,10 @@ Usage: seasann command || Options
  */
 async function renameDir(dir) {
     try {
-        await rename('./seasann-template-main', `./${dir}`);
+        await rename('./seasann-seasann-template', `./${dir}`);
     }
     catch {
         throw Error('Error renaming your project.');
-    }
-}
-/**
- * Removes ./main.tar.gz
- */
-async function rmFile() {
-    try {
-        await rm('./main.tar.gz');
-    }
-    catch {
-        throw Error('Error removing tar file');
     }
 }
 
@@ -48,22 +36,9 @@ async function rmFile() {
  * @param  {string} err
  * Executes a command and catches and error.
  */
-async function execute(cmd, err) {
+async function downloade(err) {
     try {
-        await exec({
-            cmd: cmd,
-        });
-    }
-    catch {
-        throw Error(err);
-    }
-}
-
-async function extract(file, err) {
-    try {
-        await tar.x({
-            file: file,
-        });
+        await downloadTemplate('github:seasann/seasann-template');
     }
     catch {
         throw Error(err);
@@ -75,10 +50,8 @@ async function extract(file, err) {
  * Creates a new project
  */
 async function createNewProj(name) {
-    await execute('curl -sL https://github.com/seasann/seasann-template/archive/refs/heads/main.tar.gz -o main.tar.gz', 'Error downloading template. You may not have curl installed');
-    await extract('main.tar.gz', 'Error unzipping the dowloaded template. You may not have tar installed');
+    await downloade('Error downloading template. You may not have curl installed');
     await renameDir(name);
-    await rmFile();
     console.log(`Done! Project created at ${name}`);
     const userAgent = process.env.npm_config_user_agent;
     console.log('Next steps:');

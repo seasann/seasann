@@ -1,15 +1,13 @@
-import exec from 'node-async-exec';
+import { downloadTemplate } from 'giget';
 
 /**
  * @param  {string} cmd
  * @param  {string} err
  * Executes a command and catches and error.
  */
-export async function execute(cmd: string, err: string) {
+export async function downloade(err: string) {
     try {
-        await exec({
-            cmd: cmd,
-        });
+        await downloadTemplate('github:seasann/seasann-template');
     } catch {
         throw Error(err);
     }
