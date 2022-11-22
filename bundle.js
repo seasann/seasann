@@ -1,4 +1,4 @@
-import { rename, readFile, writeFile, readdir } from 'fs/promises';
+import { rename, readFile, appendFile, writeFile, readdir } from 'fs/promises';
 import { downloadTemplate } from 'giget';
 import inquirer from 'inquirer';
 import { parse } from 'path';
@@ -110,6 +110,36 @@ async function getProjName() {
  * @param  {string} file
  * Handles every file in the posts directory
  */
+async function handleCssFile(file) {
+    try {
+        const content = await readFile(`./css/${file}`);
+        const fileWitOutExt = parse(file).name;
+        try {
+            await appendFile(`./app/${fileWitOutExt}.html`, `
+<style>
+${content}
+</style>
+            `);
+        }
+        catch (err) {
+            throw Error('Create a css directory!');
+        }
+    }
+    catch (err) {
+        console.error(err);
+    }
+}
+
+async function getNameWithNoExt(name) {
+    const parsedPath = parse(name);
+    const nameWithNoExt = parsedPath.name;
+    return nameWithNoExt;
+}
+
+/**
+ * @param  {string} file
+ * Handles every file in the posts directory
+ */
 async function handleFile(file) {
     try {
         const content = await readFile(`./posts/${file}`);
@@ -132,15 +162,25 @@ async function compile() {
     const files = await readdir('./posts');
     files.forEach(async (element) => {
         await handleFile(element);
+        const nameWithNoExt = await getNameWithNoExt(element);
+        const cssFiles = await readdir('./css');
+        cssFiles.forEach(async (cssElement) => {
+            const cssNameWithNoExt = await getNameWithNoExt(cssElement);
+            if (cssNameWithNoExt == nameWithNoExt) {
+                handleCssFile(cssElement);
+            }
+        });
     });
 }
+
+const version = '1.2.0';
 
 const argv = process.argv;
 if (argv[2] == '--help') {
     help();
 }
 else if (argv[2] == '--version') {
-    console.log('1.0.0-beta');
+    console.log(version);
 }
 else if (argv[2] == 'create') {
     const name = await getProjName();

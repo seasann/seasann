@@ -1,4 +1,4 @@
-import { renameDir } from '../utils/renamdAndRm.js';
+import { renameDir } from '../utils/rename.js';
 import { downloade } from '../utils/download.js';
 
 /**

@@ -1,6 +1,6 @@
 {
     "name": "seasann",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Full seassan cli",
     "main": "bundle.js",
     "type": "module",
@@ -20,13 +20,11 @@
     "dependencies": {
         "giget": "^1.0.0",
         "inquirer": "^9.1.4",
-        "micromark": "^3.1.0",
-        "rm-rf-async": "^1.2.0"
+        "micromark": "^3.1.0"
     },
     "devDependencies": {
         "@types/inquirer": "^9.0.2",
         "@types/node": "^18.6.4",
-        "@types/tar": "^6.1.3",
         "@typescript-eslint/eslint-plugin": "^5.42.0",
         "@typescript-eslint/parser": "^5.42.0",
         "eslint": "^8.26.0",
