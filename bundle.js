@@ -197,3 +197,6 @@ else if (argv[2] == 'create') {
 else if (argv[2] == 'compile') {
     await compile();
 }
+else {
+    help();
+}

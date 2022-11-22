@@ -15,4 +15,6 @@ if (argv[2] == '--help') {
     await createNewProj(name);
 } else if (argv[2] == 'compile') {
     await compile();
+} else {
+    help();
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.2
+
+-   Make it display help if no args are passed
+
 ## 1.2.1
 
 -   Make it more verbose
