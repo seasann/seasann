@@ -1,6 +1,15 @@
 # Changelog
 
-# 1.1.0
+## 1.2.1
+
+-   Make it more verbose
+-   Add chalk as dependencies.
+
+## 1.2.0
+
+-   Add css support
+
+## 1.1.0
 
 Make seassan compleatly cross platform!
 

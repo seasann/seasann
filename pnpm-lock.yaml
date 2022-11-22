@@ -5,6 +5,7 @@ specifiers:
     '@types/node': ^18.6.4
     '@typescript-eslint/eslint-plugin': ^5.42.0
     '@typescript-eslint/parser': ^5.42.0
+    chalk: ^5.1.2
     eslint: ^8.26.0
     giget: ^1.0.0
     inquirer: ^9.1.4
@@ -15,6 +16,7 @@ specifiers:
     typescript: ^4.7.4
 
 dependencies:
+    chalk: 5.1.2
     giget: 1.0.0
     inquirer: 9.1.4
     micromark: 3.1.0

@@ -7,7 +7,9 @@
     "scripts": {
         "build": "rimraf build && pnpm lint && pnpm fix && tsc && rollup --config && rimraf build",
         "build-tsc": "tsc",
+        "build-fast": "rimraf build && tsc && rollup --config && rimraf build",
         "lint": "prettier --write .",
+        "lint-git": "pretty-quick",
         "check": "eslint src",
         "fix": "eslint src --fix"
     },
@@ -18,6 +20,7 @@
         "seasann": "./bundle.js"
     },
     "dependencies": {
+        "chalk": "^5.1.2",
         "giget": "^1.0.0",
         "inquirer": "^9.1.4",
         "micromark": "^3.1.0"
