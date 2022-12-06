@@ -1,4 +1,7 @@
 # Changelog
+## 1.2.3
+
+-   New readme!
 
 ## 1.2.2
 
