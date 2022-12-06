@@ -1,56 +1,36 @@
-<div align="center">
-    <h1>Seasann</h1>
-    <p>A minimalistic static site generator</p>
-</div>
+# Seasann
 
-## Introduction
+Seasann is an efficient Static Site Generator that uses Typescript and ships ZERO JAVASCRIPT. It is build tool agnostic and provides a great developer experience.
 
-Seasann is a static site generator that is designed to be as un-opinionated and minimal as possible.
+## Features
 
-Seasann is built with TypeScript.
+- Compiles markdown and css in one file
+- Serves files using Vite by default, yet is build tool agnostic for maximun felxibility.
+- Easy to use - just write markdown and Seasann handles the rest
 
-## Prerequisites
+## Getting Started
 
-`seassan` requires:
+Make sure you have Node JS 12 or higher installed on your system
 
--   [Node.js](https://nodejs.org) at least version 12 (due to top level await)
--   [Curl](https://curl.se)
--   [Tar](https://www.gnu.org/software/tar/)
--   [NPM](https://www.npmjs.com)
--   [NPX](https://docs.npmjs.com/cli/v7/commands/npx/)
-
-## Create a new project 💾
-
-First install the cli
+Install Seasann using npm:
 
 ```bash
-npm i -g seasann
+npm install -g seasann
 ```
 
-Then use `seasann create` to create an application
+Create a new project and start writing markdown:
 
 ```bash
-seasann create
+seasann create my-project
+cd my-project
 ```
 
-## Usage
-
-All markdown content is contained in the posts directory.
-
-When you run `npm run dev` it will first run `seasann compile` to compile your markdwon, then it will serve your app, seasann uses vite, but is frontend toll agnostic.
+Serve your project using Vite:
 
 ```bash
 npm run dev
 ```
 
-## Build
-
-If you want to build the app use `npm run build`
-
-```bash
-npm run build
-```
-
 ## License
 
-Apache 2.0
+Seasann is licensed under the Apache 2.0 license.
