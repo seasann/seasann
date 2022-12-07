@@ -15,11 +15,21 @@ if (argv[2] == '--help') {
     await createNewProj(name);
 } else if (argv[2] == 'compile') {
     if (argv[3] == '--dir') {
-        await compile(argv[4]);
-    } else {
-        await compile('posts');
+        if ( argv[5] == '--cssDir'){
+            await compile(argv[4], argv[6]);
+        } else {
+            await compile(argv[4], 'css');
+        }
+    } else if (argv[3] == '--cssDir'){
+        if ( argv[5] == '--dir'){
+            await compile(argv[4], argv[6]);
+        } else {    
+            await compile(argv[4], 'posts');
+        }   
+    } 
+    else {
+        await compile('posts', 'css');
     }
 } else {
     help();
 }
-0

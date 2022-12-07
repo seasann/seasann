@@ -5,9 +5,9 @@ import { readFile, appendFile } from 'fs/promises';
  * @param  {string} file
  * Handles every file in the posts directory
  */
-export async function handleCssFile(file: string) {
+export async function handleCssFile(file: string, dir: string) {
     try {
-        const content = await readFile(`./css/${file}`);
+        const content = await readFile(`./${dir}/${file}`);
         const fileWitOutExt = parse(file).name;
         try {
             await appendFile(
