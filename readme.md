@@ -4,9 +4,9 @@ Seasann is an efficient Static Site Generator that uses Typescript and ships ZER
 
 ## Features
 
-- Compiles markdown and css in one file
-- Serves files using Vite by default, yet is build tool agnostic for maximun felxibility.
-- Easy to use - just write markdown and Seasann handles the rest
+-   Compiles markdown and css in one file
+-   Serves files using Vite by default, yet is build tool agnostic for maximun felxibility.
+-   Easy to use - just write markdown and Seasann handles the rest
 
 ## Getting Started
 

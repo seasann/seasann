@@ -1,103 +1,146 @@
 # Contributing Guidelines
 
--   [Contributing Guidelines](#contributing-guidelines)
-    -   [Welcome](#welcome)
-    -   [Questions and bugs](#questions-and-bugs)
-        -   [Question](#question)
-        -   [Bug reporting](#bug-reporting)
-    -   [Contributing](#contributing)
-        -   [Setup your development environment](#setup-your-development-environment)
-        -   [Before submitting](#before-submitting)
-        -   [Create a Pull Request](#create-a-pull-request)
-            -   [Create a title](#create-a-title)
+Thank you for considering contributing to Seasann! We appreciate your time and effort in helping improve our project.
 
-**NOTE!** These guidelines are just a framework of rules. If we don't believe that a PR/Issue should exist, even if it follows the guidelines perfectly, we will not accept it. That said if your pr is rejected, don't be demoralized. Ask for some suggestions and apply those suggestions in the future.
+Remember that these are guidelines, not rules and if you wish to improve them, open a pull request.
 
-## Welcome
+# Contributing
 
-Thank you so much for helping out! In this guide we will help you open your first question/bug report and make your first contribution!
+## Before you contribute!
 
-## Questions and bugs
+Befor you start developing a feature, follow these steps listed below
 
-### Question
+### 1: Check if there is an issue open
 
-The discussion tab is perfect for that! There you can ask questions, propose ideas, and just chat with us!
+If you are planning on fixing a bug, than check if there are any issue about it. If yes, than, open a PR, and in the start of the text, write
 
-### Bug reporting
-
-First, check the [issues](https://github.com/micziz/seasann/issues) tab on [github](https://github.com/seasann/seasann). If you see the same or a similar problem to yours, look there. If there are no other issues, you can open one yourself. Please make sure that there are no issues similar to yours otherwise your issue will be closed and marked as duplicate.
-
-All bug tracking happens on the [issues](https://github.com/seasann/seasann/issues) tab on [github](https://github.com/seasann/seasann). Here are some reccomendations for creating a good github issues:
-
-We will try to answer in a timely manner, but please be patient.
-
--   Use a clear and descriptive title for the issue to identify the problem.
--   Explain the behavior you expected to see instead and why.
--   Then explain what the actual behavior was.
--   Describe the exact steps to reproduce the problem in as many details as possible. For example, what command you used, if you changed something etc..
--   Provide specific examples to demonstrate the steps. If you're providing snippets in the issue, use Markdown code blocks.
--   Provide version info for seasann, node, npm etc... depending on what seems necessary.
-
-## Contributing
-
-Thanks for contributing! There are some things you need to do before you contribute.
-
-### Setup your development environment
-
-First, clone the repository.
-
-```bash
-git clone https://github.com/seasann/seasann.git
+```markdown
+Closes #<the-pr-number>
 ```
 
-For modifying the template:
+If there are no issues
 
-```bash
-git clone https://github.com/seasann/seasann-template.git
+## Getting started
+
+### Prerequisits
+
+-   [Git](https://git-scm.com)
+-   [A github account](https://github.com/signup)
+-   [NodeJS](https://nodejs.org)
+-   [Pnpm](https://pnpm.io)
+
+### Forking and cloning the repo
+
+To contribute to Seasann, first fork the repository and clone it to your local machine.
+
+To do this, navigate to the [Seasann repository on GitHub](https://github.com/seasann/seasann) and click the "Fork" button in the top right corner. This will create a copy of the repository under your own GitHub account.
+
+Next, use the following command to clone the repository to your local machine:
+
+```
+git clone https://github.com/<your-username>/seasann.git
 ```
 
-Then cd into the directory and install dependencies:
+Then, create a new branch to develop your code in:
 
 ```bash
+git branch -m patch-1
+```
+
+(Change patch-1 to what is your preference.)
+
+### Setting up the development environment
+
+To start developing in dev mode, first make sure you have pnpm installed on your machine. Then, navigate to the cloned repository on your local machine and run the following command to install the project dependencies:
+
+```
 cd seasann
+pnpm install
 ```
 
-One final thing. While you can use text editor/IDE of your choice, but we recommend the usage of [VS Code](https://code.visualstudio.com).
+Befor you start making changes, start the dev server:
 
-Your developer environment is setup! Now we can start developing!
+```
+pnpm dev
+```
 
-### Before submitting
+This will start a local development server and enable hot reloading, allowing you to make changes to the code and see the results in real time.
 
-Before submitting a pull request please run `npm run build` to lint, check and build into a bundle.
+### Code Linting and Formatting
 
-### Create a Pull Request
+Seasann uses the default ESLint and Typescript rules for code linting, and a pretty default prettier config. To ensure your code adheres to these standards, please run the linting and formatting scripts before submitting a pull request:
 
-After you have finished developing your code you can open a [pull request](https://github.com/seasann/seasann/pulls) on [github](https://github.com/seasann/seasann).
+```
+pnpm run lint
+pnpm run format
+```
 
-#### Create a title
+### Submitting a pr
 
-Pull requests require great titles. Here are some prefix for titles:
+To submit a PR (or pull request), you will have to
 
--   **feat**: New feature
+1:
 
--   **docs**: Modification to documents/documentations
+Run the `pnpm build` script
 
--   **fix**: Small bugfix
+```bash
+pnpm build
+```
 
--   **style**: Formatting changes witch does not impact code
+This will:
 
--   **refactor**: Refactored code
+-   Remove the old bundle.js
+-   Lint and format
+-   Build typescript into a `build` directory
+-   Build that `build` directory into `bundle.js` using rollup.
+-   Remove the `build` directory.
 
--   **chore**: Updating configs, workflows etc. Does not impact code.
+This is a long process, so have patience.
 
-So the title should be:
+2:
 
-**type**: PR title
+Commit your changes:
 
-Make sure also that:
+We strongly reccomend undercommiting, or commiting small bits at a time, but it's not a rule and if you prefer commiting all at once or in big pieces, the pr will be accepted.
 
--   You are merging your branch into the develop branch
--   You link any issues that are resolved or fixed by your changes. (this is done by typing "Fixes #<issue number>") in your pull request
--   Where possible, you have used git pull --rebase, to avoid creating unnecessary merge commits
--   Use the present tense ("Add feature" not "Added feature")
--   Use the imperative mood ("Change function to..." not "Changes function to...")
+After the build is done, run
+
+```bash
+git add .
+git commit -m "<commit-title>"
+git push origin <branch-name>
+```
+
+This will commit and push that commit to your branch in the remote repo.
+
+3:
+
+Open the pr
+
+First, go on your fork of the repository. The link will be `https//github.com/<your-username>/seasann`. Then, go on branches, in the top left corner, and select the branch name you were working on.
+
+Then, on the box above the code, click `contribute`. (Make sure that your fork is synchronized before opening.)
+
+Then, fill out the template, and submit.
+
+If you are not finished, open a draft pr.
+
+### Now What?
+
+The team will respond to you in a timley manner (about 24 hours or so). If it's taking a very long time (eg 2-3 days) than wirte a comment on YOUR pr and ask if this is getting merged. DO NOT SPAM, or MAKE COMMENTS ON OTHER PULL REQUESTS. Draft pr's will be ignored, and will not be commented on or reviewd, so check again if you have set the pr to Ready To Review.
+
+## My pr got rejected
+
+First of all, we don't reject pr's often. And when we do, we always do it in a calm way. If your PR was rejected, we will always give you a concise reason why, and some feedback to improve. If your pr gets rejected, don't be sad, but use the feedback we gave you and give it another shot. But, DO NOT SPAM PR'S. If you get rejected twice, and are not improving, please do not open ANY more issues. We will ignore them and close them, without needing to reason.
+
+# Reporting Bugs
+
+If you encounter a bug while using Seasann, please follow these short guidelines before opening an issue:
+
+## Check if there is something similar
+
+To avoid duplicates
+
+# Asking Questions
+
+If you have any questions about Seasann, please feel free to ask them in the Community tab.

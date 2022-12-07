@@ -5,11 +5,11 @@ import { getNameWithNoExt } from '../utils/getNameWithNoExt';
 import { handleFile } from '../utils/handleFile';
 import chalk from 'chalk';
 
-export async function compile() {
-    const files = await readdir('./posts');
+export async function compile(dir: string) {
+    const files = await readdir(`./${dir}`);
     files.forEach(async (element) => {
         console.log(chalk.blue(`Compiling ${element}...\n`));
-        await handleFile(element);
+        await handleFile(element, dir);
         console.log(chalk.green(`Compiled ${element}!\n`));
         const nameWithNoExt = await getNameWithNoExt(element);
         const cssFiles = await readdir('./css');
@@ -25,7 +25,9 @@ export async function compile() {
                 );
             } else {
                 console.log(
-                    `No corresponding ${cssElement} found for ${element}`
+                    chalk.red(
+                        `No corresponding ${cssElement} found for ${element}`
+                    )
                 );
             }
         });

@@ -141,9 +141,9 @@ async function getNameWithNoExt(name) {
  * @param  {string} file
  * Handles every file in the posts directory
  */
-async function handleFile(file) {
+async function handleFile(file, dir) {
     try {
-        const content = await readFile(`./posts/${file}`);
+        const content = await readFile(`./${dir}/${file}`);
         const compiled = micromark(content);
         const fileWitOutExt = parse(file).name;
         try {
@@ -159,11 +159,11 @@ async function handleFile(file) {
 }
 
 // Compile Command
-async function compile() {
-    const files = await readdir('./posts');
+async function compile(dir) {
+    const files = await readdir(`./${dir}`);
     files.forEach(async (element) => {
         console.log(chalk.blue(`Compiling ${element}...\n`));
-        await handleFile(element);
+        await handleFile(element, dir);
         console.log(chalk.green(`Compiled ${element}!\n`));
         const nameWithNoExt = await getNameWithNoExt(element);
         const cssFiles = await readdir('./css');
@@ -175,7 +175,7 @@ async function compile() {
                 console.log(chalk.green(`Compiled and injected ${cssElement}!\n`));
             }
             else {
-                console.log(`No corresponding ${cssElement} found for ${element}`);
+                console.log(chalk.red(`No corresponding ${cssElement} found for ${element}`));
             }
         });
     });
@@ -195,7 +195,12 @@ else if (argv[2] == 'create') {
     await createNewProj(name);
 }
 else if (argv[2] == 'compile') {
-    await compile();
+    if ('--dir' in argv) {
+        await compile(argv[4]);
+    }
+    else {
+        await compile('posts');
+    }
 }
 else {
     help();

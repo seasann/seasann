@@ -6,9 +6,9 @@ import { micromark } from 'micromark';
  * @param  {string} file
  * Handles every file in the posts directory
  */
-export async function handleFile(file: string) {
+export async function handleFile(file: string, dir: string) {
     try {
-        const content = await readFile(`./posts/${file}`);
+        const content = await readFile(`./${dir}/${file}`);
         const compiled = micromark(content);
         const fileWitOutExt = parse(file).name;
         try {

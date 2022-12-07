@@ -14,7 +14,12 @@ if (argv[2] == '--help') {
     const name = await getProjName();
     await createNewProj(name);
 } else if (argv[2] == 'compile') {
-    await compile();
+    if (argv[3] == '--dir') {
+        await compile(argv[4]);
+    } else {
+        await compile('posts');
+    }
 } else {
     help();
 }
+0

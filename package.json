@@ -5,6 +5,7 @@
     "main": "bundle.js",
     "type": "module",
     "scripts": {
+        "dev": "watch 'pnpm build-fast' src",
         "build": "rimraf build && pnpm lint && pnpm fix && tsc && rollup --config && rimraf build",
         "build-tsc": "tsc",
         "build-fast": "rimraf build && tsc && rollup --config && rimraf build",
@@ -34,6 +35,7 @@
         "prettier": "^2.7.1",
         "rimraf": "^3.0.2",
         "rollup": "^3.2.5",
-        "typescript": "^4.7.4"
+        "typescript": "^4.7.4",
+        "watch": "^1.0.2"
     }
 }
